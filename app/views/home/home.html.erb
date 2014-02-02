@@ -1,2 +1,9 @@
-<h1>Home#home</h1>
-<p>Find me in app/views/home/home.html.erb</p>
+<% content_for :page_heading do %>
+<h1>gearlocker</h1>
+<% end %>
+
+
+<p>welcome to gearlocker.</p>
+
+
+<p><%= link_to "sign in", new_group_session_path %> or <%= link_to "sign up", new_group_registration_path %></p>
