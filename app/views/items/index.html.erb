@@ -8,6 +8,7 @@
     <tr>
       <th>Item name</th>
       <th>Description</th>
+      <th>Actions</th>
     </tr>
   </thead>
 
@@ -16,7 +17,11 @@
     <tr>
       <td><%= item.name %></td>
       <td><%= item.description %></td>
+      <td><%= link_to "edit", edit_item_path(item) %> <%= link_to "delete", item_path(item), method: :delete, data: { confirm: "are you sure you want to delete '#{item.name}'?" } %></td>
     </tr>
     <% end %>
   </tbody>
 </table>
+
+
+<p><%= link_to "add new item", new_item_path %></p>
