@@ -4,7 +4,7 @@ class ItemsController < ApplicationController
 
 
   def index
-    @items = current_group.items
+    @items = current_group.items.order(name: :asc)
   end
 
   def show
@@ -29,9 +29,17 @@ class ItemsController < ApplicationController
   end
 
   def update
+    if @item.update(item_params)
+      redirect_to items_path
+    else
+      render 'edit'
+    end
   end
 
   def destroy
+    @item.destroy
+
+    redirect_to items_path
   end
 
 
