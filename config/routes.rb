@@ -1,4 +1,6 @@
 Gearlocker::Application.routes.draw do
+  get "home/home"
+  get "home/index"
   devise_for :groups
 
   authenticated :group do
