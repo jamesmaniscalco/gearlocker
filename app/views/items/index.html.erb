@@ -1,0 +1,22 @@
+<% content_for :page_heading do %>
+<h1>Items</h1>
+<% end %>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Item name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @items.each do |item| %>
+    <tr>
+      <td><%= item.name %></td>
+      <td><%= item.description %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

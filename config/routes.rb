@@ -1,7 +1,11 @@
 Gearlocker::Application.routes.draw do
+
   get "home/home"
   get "home/index"
+  
   devise_for :groups
+
+  resources :items
 
   authenticated :group do
     root to: 'home#index', as: "authenticated_root"

@@ -1,0 +1,17 @@
+<%= form_for @item do |f| %>
+  <div>
+    <%= f.label :name, "Item Name" %><br />
+    <%= f.text_field :name %>
+  </div>
+
+  <div>
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+
+  <div>
+    <%= f.submit "add item" %>
+    <%= link_to "cancel", items_path %>
+  </div>
+
+<% end %>
