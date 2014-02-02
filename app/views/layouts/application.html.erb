@@ -8,6 +8,11 @@
 </head>
 <body>
 
+<%= yield :page_heading %>
+
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+
 <%= yield %>
 
 </body>
